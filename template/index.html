@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Banao_Login_Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script>
+      function conf() {
+        var a = document.getElementById("password").value;
+        var b = document.getElementById("ConfirmPassword").value;
+        if (a === b) {
+          document.getElementById("paragraph22").textContent = "matched";
+        } else {
+          document.getElementById("paragraph22").textContent = "Not matched";
+        }
+      }
+      function Signup() {
+        if (document.getElementById("flexRadioDefault1").checked) {
+          alert("patient is sign up");
+        } else if (document.getElementById("flexRadioDefault2").checked) {
+          alert("Doctor is sign up");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container w-25">
+      <div class="row mt-3">
+        <div class="spContainer mx-auto">
+          <div class="card px-4 py-5 border-0 shadow">
+            <div class="d-inline text-left mb-3">
+              <h3 class="font-weight-bold">Sign up</h3>
+              <div class="d-inline text-left mb-1">
+                <div class="form-group mx-auto mb-0">
+                  <label class="text-black-50 small"> as </label>
+                </div>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Patient
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Doctor
+                </label>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First name"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Last name"
+                />
+              </div>
+            </div>
+            <div class="d-inline text-center mb-3">
+              <div class="form-group mx-auto">
+                <input
+                  class="form-control inpSp"
+                  type="text"
+                  placeholder="Username"
+                />
+              </div>
+            </div>
+            <div class="d-inline text-center mb-3">
+              <div class="form-group mx-auto">
+                <input
+                  class="form-control inpSp"
+                  type="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="d-inline text-center mb-3">
+              <div class="form-group mx-auto">
+                <input
+                  class="form-control inpSp"
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                />
+              </div>
+            </div>
+            <div class="d-inline text-center mb-1">
+              <div class="form-group mx-auto">
+                <input
+                  class="form-control inpSp"
+                  type="password"
+                  placeholder="Confirm Password"
+                  id="ConfirmPassword"
+                  oninput="conf()"
+                />
+                <p id="paragraph22" class="text-start"></p>
+              </div>
+            </div>
+            <div class="d-inline text-center mb-3">
+              <div class="form-group mx-auto">
+                <input
+                  class="form-control inpSp"
+                  type="text"
+                  placeholder="Address (line1, city, state, pincode)"
+                />
+              </div>
+            </div>
+            <label>Upload Profile Picture</label>
+            <div class="d-inline text-center mb-3">
+              <div class="form-group mx-auto">
+                <input class="form-control inpSp" type="file" />
+              </div>
+            </div>
+            <div class="d-inline text-left mb-3">
+              <div class="form-group mx-auto">
+                <button class="btn btn-primary" onclick="Signup()">
+                  Sign up
+                </button>
+              </div>
+            </div>
+            <label>If already Register then </label>
+            <div class="d-inline text-left mb-3">
+                <a href="login">
+              <div class="form-group mx-auto">
+                <button class="btn btn-primary"  onclick="Signup()">
+                  Login
+                </button>
+            </div>
+        </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
